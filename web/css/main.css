@@ -1,0 +1,95 @@
+:root {
+  --navy: #1f2b6e;
+  --ink: #1c1f2a;
+  --muted: #5d6273;
+  --line: #e2e4ea;
+  --radius: 6px;
+  --max: 1100px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color: var(--ink);
+  background: #fff;
+  line-height: 1.6;
+}
+
+img { display: block; max-width: 100%; height: auto; }
+a { color: var(--navy); }
+a:focus-visible { outline: 3px solid var(--navy); outline-offset: 3px; }
+
+.container { max-width: var(--max); margin-inline: auto; padding-inline: 1.25rem; }
+
+.visually-hidden {
+  position: absolute; width: 1px; height: 1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap;
+}
+
+/* Cabeçalho e rodapé */
+.site-header { border-bottom: 1px solid var(--line); }
+.site-header .container { padding-block: 1rem; }
+.site-header__logo { font-weight: 700; font-size: 1.125rem; color: var(--navy); text-decoration: none; }
+
+.site-footer { border-top: 1px solid var(--line); color: var(--muted); font-size: .875rem; }
+.site-footer .container { padding-block: 1.5rem; }
+
+/* Slider */
+.hero { margin-bottom: 3rem; }
+.hero__slide {
+  position: relative;
+  aspect-ratio: 16 / 7;
+  min-height: 340px;
+  background: var(--navy);
+  overflow: hidden;
+}
+.hero__image { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.hero__content {
+  position: absolute; left: 0; right: 0; bottom: 0;
+  padding-block: 2rem 3.25rem;
+  color: #fff;
+  background: linear-gradient(to top, rgba(0, 0, 0, .7), transparent);
+}
+.hero__title { font-size: clamp(1.5rem, 4vw, 2.5rem); line-height: 1.15; margin: 0 0 .5rem; }
+.hero__text { max-width: 60ch; margin: 0 0 1rem; }
+
+.button {
+  display: inline-block;
+  padding: .6rem 1.1rem;
+  background: #fff;
+  color: var(--navy);
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: var(--radius);
+}
+
+.hero .swiper-button-prev,
+.hero .swiper-button-next { color: #fff; }
+.hero .swiper-pagination-bullet { background: #fff; }
+
+/* Artigos */
+.articles { padding-bottom: 4rem; }
+.section-title { font-size: 1.5rem; margin: 0 0 1.5rem; }
+.articles__grid { display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+
+.card { position: relative; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+.card__body { padding: 1rem 1.25rem 1.25rem; }
+.card__title { font-size: 1.125rem; line-height: 1.3; margin: 0 0 .5rem; }
+.card__title a { color: var(--ink); text-decoration: none; }
+/* "Stretched link": o pseudo-elemento cobre o cartão todo, então o cartão
+   inteiro é clicável, mas só existe um link no HTML. */
+.card__title a::after { content: ""; position: absolute; inset: 0; }
+.card__title a:focus-visible { outline: none; }
+.card:hover .card__title a { text-decoration: underline; }
+.card:focus-within { outline: 3px solid var(--navy); outline-offset: 2px; }
+.card__summary { margin: 0; color: var(--muted); }
+
+/* Página de artigo */
+.article { max-width: 720px; padding-block: 2rem 4rem; }
+.back-link { display: inline-block; margin-bottom: 1.5rem; }
+.article h1 { font-size: clamp(1.75rem, 4vw, 2.5rem); line-height: 1.2; margin: 0 0 .25rem; }
+.article__meta { color: var(--muted); margin: 0 0 1.5rem; }
+.article__image { border-radius: var(--radius); margin-bottom: 1.5rem; }
+.article__summary { font-size: 1.125rem; }

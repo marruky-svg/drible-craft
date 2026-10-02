@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="{{ currentSite.language }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}{{ siteName }}{% endblock %}</title>
+
+  {# CSS de bibliotecas primeiro, o nosso depois, para o nosso poder sobrepor-se #}
+  {% block styles %}{% endblock %}
+  <link rel="stylesheet" href="{{ url('css/main.css') }}">
+
+  {{ head() }}
+</head>
+<body>
+  {{ beginBody() }}
+
+  <header class="site-header">
+    <div class="container">
+      <a class="site-header__logo" href="{{ siteUrl }}">{{ siteName }}</a>
+    </div>
+  </header>
+
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© {{ now|date('Y') }} {{ siteName }}</div>
+  </footer>
+
+  {% block scripts %}{% endblock %}
+  {{ endBody() }}
+</body>
+</html>
