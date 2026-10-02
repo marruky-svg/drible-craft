@@ -1,12 +1,29 @@
-dateModified: 1790934933
+dateModified: 1790940107
 email:
   fromEmail: marruky747@gmail.com
   fromName: 'Drible Craft'
   transportType: craft\mail\transportadapters\Sendmail
+fs:
+  uploads:
+    hasUrls: true
+    name: Uploads
+    settings:
+      path: '@webroot/uploads'
+    type: craft\fs\Local
+    url: '@web/uploads'
 meta:
   __names__:
     0b423447-6875-4235-aab2-f2e72f2307e6: 'Drible Craft' # Drible Craft
     0ca3bc86-15e1-4aa5-9519-2fc84c324b41: 'Drible Craft' # Drible Craft
+    2a46aaec-0d7d-4672-90e0-c28e6ae65833: Articles # Articles
+    2f24bd3d-170d-42f6-8392-a437870d885d: Image # Image
+    5fadb7a7-f87e-449f-b1bf-5f8bfac669df: Slider # Slider
+    7de4f835-59aa-44c8-a170-a4a9d1eef898: Slide # Slide
+    9d163845-b52c-4061-9748-6bab754e8fd8: Article # Article
+    36d5eb7e-28c8-4a4a-9bcb-048086193c0b: Link # Link
+    780a04b3-4e3f-4a5e-914a-3251a9ab3401: 'Supporting text' # Supporting text
+    329030fc-6ea7-4d76-8055-0837a70bafdb: Images # Images
+    d9f8fd31-0b08-42db-9cea-8137c7e91adf: Summary # Summary
 system:
   edition: solo
   live: true

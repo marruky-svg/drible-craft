@@ -1,0 +1,22 @@
+defaultPlacement: end
+enableVersioning: false
+entryTypes:
+  -
+    uid: 7de4f835-59aa-44c8-a170-a4a9d1eef898 # Slide
+handle: slider
+maxAuthors: 1
+minAuthors: 1
+name: Slider
+previewTargets:
+  -
+    label: 'Primary entry page'
+    refresh: '1'
+    urlFormat: '{url}'
+propagationMethod: all
+siteSettings:
+  0ca3bc86-15e1-4aa5-9519-2fc84c324b41: # Drible Craft
+    enabledByDefault: true
+    hasUrls: true
+    template: slider/_entry.twig
+    uriFormat: 'slider/{slug}'
+type: channel

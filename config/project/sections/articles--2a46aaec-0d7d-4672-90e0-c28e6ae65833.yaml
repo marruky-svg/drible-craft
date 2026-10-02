@@ -1,0 +1,22 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  -
+    uid: 9d163845-b52c-4061-9748-6bab754e8fd8 # Article
+handle: articles
+maxAuthors: 1
+minAuthors: 1
+name: Articles
+previewTargets:
+  -
+    label: 'Primary entry page'
+    refresh: '1'
+    urlFormat: '{url}'
+propagationMethod: all
+siteSettings:
+  0ca3bc86-15e1-4aa5-9519-2fc84c324b41: # Drible Craft
+    enabledByDefault: true
+    hasUrls: true
+    template: articles/_entry.twig
+    uriFormat: 'articles/{slug}'
+type: channel
